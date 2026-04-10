@@ -34,7 +34,6 @@ stages:
           - script: |
               cd ansible
               ansible-playbook -i inventory.ini site.yml \
-                -e "frontend_ip=20.220.191.102 backend_ip=20.151.172.142 mysql_fqdn=bookreview-db.mysql.database.azure.com" \
                 --ssh-extra-args "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
             displayName: 'Run Ansible Playbook'
             env:
